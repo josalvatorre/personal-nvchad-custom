@@ -8,6 +8,18 @@ lspconfig.pyright.setup({
   filetypes = {"python"},
 })
 
+lspconfig.tsserver.setup {
+  on_attach = config.on_attach,
+  capabilities = config.capabilities,
+  -- Tutorial guy suggested adding this bc of "clutter",
+  -- but let's try keeping suggestions for now.
+  -- init_options = {
+  --   preferences = {
+  --     disableSuggestions = true,
+  --   },
+  -- },
+}
+
 lspconfig.efm.setup {
   init_options = {documentFormatting = true},
   settings = {
