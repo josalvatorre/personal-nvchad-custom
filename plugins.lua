@@ -4,8 +4,10 @@ local plugins = {
     opts = {
       ensure_installed = {
         "efm",
-        -- TODO pyright requires npm, which I'm reluctant to install.
+        "lua-language-server",
+        -- TODO pyright requires npm, so I should add it to the Ansible playbook.
         "pyright",
+        "stylua",
         "typescript-language-server",
       },
     },
@@ -17,6 +19,14 @@ local plugins = {
       require "custom.configs.lspconfig"
     end
   },
+  {
+    -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#modules
+    -- I found this by searching for "treesitter nvchad" in plugins.lua files
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = "all",
+      auto_install = true,
+    },
+  },
 }
 return plugins
-
