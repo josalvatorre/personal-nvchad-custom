@@ -50,5 +50,9 @@ local plugins = {
       vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
     end
   },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
 }
 return plugins
