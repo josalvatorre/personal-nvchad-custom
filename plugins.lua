@@ -54,5 +54,13 @@ local plugins = {
     "github/copilot.vim",
     lazy = false,
   },
+  {
+    "nvim-lua/plenary.nvim",
+    lazy = false,
+  },
+  {
+    "nvim-pack/nvim-spectre",
+    lazy = false,
+  },
 }
 return plugins
